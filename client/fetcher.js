@@ -60,7 +60,7 @@ const fetcher = async (resource, init = {}) => {
   try {
     const result = await response.json();
     return result;
-  } catch (err) { }
+  } catch (err) { return  console.log(err)}
 };
 
 export default fetcher;

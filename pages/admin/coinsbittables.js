@@ -20,6 +20,7 @@ import Admin from "layouts/Admin.js";
 import Header from "components/Headers/Header.js";
 import "dayjs/locale/tr";
 import HeaderWhiteBit from "../../components/Headers/HeaderWhiteBit";
+import HeaderCoinSpeed from "../../components/Headers/HeaderCoinSpeed";
 
 const api = `${process.env.NEXT_PUBLIC_API_URL}/trades`;
 
@@ -31,8 +32,8 @@ function Tables() {
 
   return (
     <>
-      <HeaderWhiteBit />
-      <Container className="mt-3 pt-4" fluid>
+      <HeaderCoinSpeed/>
+      <Container className="mt--7" fluid>
         <Row>
           <div className="col">
             <Card className="shadow">

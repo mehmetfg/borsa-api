@@ -12,13 +12,13 @@ import fetcher from "../../client/fetcher";
 
 
 const tradeApi = `${process.env.NEXT_PUBLIC_API_URL}/trades`;
-const cyceHasanBalance = `${process.env.NEXT_PUBLIC_API_URL}/whitebalance/cyce?account=hasan`;
-const usdtHasanBalance = `${process.env.NEXT_PUBLIC_API_URL}/whitebalance/usdt?account=hasan`;
-const cyceSusaBalance = `${process.env.NEXT_PUBLIC_API_URL}/whitebalance/cyce?account=susa`;
-const usdtSusaBalance = `${process.env.NEXT_PUBLIC_API_URL}/whitebalance/usdt?account=susa`;
+const cyceHasanBalance = `${process.env.NEXT_PUBLIC_API_URL}/coinspeedbalance/CYCE?account=hasan`;
+const usdtHasanBalance = `${process.env.NEXT_PUBLIC_API_URL}/coinspeedbalance/USDT?account=hasan`;
+const cyceSusaBalance = `${process.env.NEXT_PUBLIC_API_URL}/coinspeedbalance/CYCE?account=susa`;
+const usdtSusaBalance = `${process.env.NEXT_PUBLIC_API_URL}/coinspeedbalance/USDT?account=susa`;
 
 
-function HeaderWhiteBit() {
+function HeaderCoinSpeed() {
   const { data: trades } = useSWR(tradeApi);
 
   const { data: hasanCyce } = useSWR(cyceHasanBalance);
@@ -70,13 +70,13 @@ function HeaderWhiteBit() {
 
   return (
     <>
-      <div className="header bg-gradient-dark  ">
+      <div className="header bg-gradient-dark pb-8 ">
 
         <Container fluid>
 
           <div className="header-body">
             <div className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">
-              Whitebit
+              Coinsbit
             </div>
             {/* Card stats */}
             <Row>
@@ -173,4 +173,4 @@ function HeaderWhiteBit() {
   );
 }
 
-export default HeaderWhiteBit;
+export default HeaderCoinSpeed;

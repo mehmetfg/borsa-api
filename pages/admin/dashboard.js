@@ -32,7 +32,7 @@ import {
 
 import Header from "components/Headers/Header.js";
 import HeaderWhiteBit from "../../components/Headers/HeaderWhiteBit";
-
+import HeaderCoinSpeed from "../../components/Headers/HeaderCoinSpeed";
 const Dashboard = (props) => {
   const [activeNav, setActiveNav] = React.useState(1);
   const [chartExample1Data, setChartExample1Data] = React.useState("data1");
@@ -50,6 +50,7 @@ const Dashboard = (props) => {
     <>
       <Header/>
       <HeaderWhiteBit/>
+      <HeaderCoinSpeed/>
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
