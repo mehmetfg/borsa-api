@@ -18,7 +18,7 @@ export default async function balance(request, response) {
 
     try {
         //const endpoint = `https://big.one/api/v3/viewer/trades?asset_pair_name=CYCE-USDT&limit=200`;
-        const endpoint = `http://127.0.0.1:8000/api/get-api?user=hasan&currency=${asset.toUpperCase()}`;
+        const endpoint = `https://panel.cycecoin.com/api/get-api?user=hasan&currency=${asset.toUpperCase()}`;
         const result = await fetcher(endpoint);
         const data = result;
 
